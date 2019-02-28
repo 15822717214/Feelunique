@@ -4,6 +4,9 @@ export default{
     },
     handleGoods(state,data){
     	state.brandsimg=data.brands
-    	console.log(data)
+    	
+    },
+    handlecan(state){
+    	state.flag = "false"
     }
 }

@@ -9,6 +9,7 @@ import "./common/css/reset.css"
 import "./common/js/flexble"
 
 //引入iconfont图标
+import "./assets/iconfont2/iconfont.css"
 import "./assets/iconfont/iconfont.css"
 
 //引入store

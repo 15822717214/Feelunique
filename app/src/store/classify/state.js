@@ -1,4 +1,5 @@
 export default{
     bannerimg:[],
-    brandsimg:[]
+    brandsimg:[],
+    flag:""
 }

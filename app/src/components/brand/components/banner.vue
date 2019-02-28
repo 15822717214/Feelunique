@@ -1,8 +1,8 @@
-<template>
+ <template>
 	<div class="swiper-container" ref="bannerContainer">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" v-for="(item,index) in bannerimg">
-				<img :src="item.img" />
+			<div class="swiper-slide" v-for="(item,index) in bannerimg" >
+				<img :src="item.img"  />
 			</div>
 
 		</div>
@@ -38,8 +38,13 @@
 </script>
 
 <style scoped lang="scss">
-	.swiper-container>.swiper-wrapper>.swiper-slide>img {
+
+	.swiper-container{
 		width: 100%;
 		height: 4.25rem;
+	.swiper-wrapper>.swiper-slide>img {
+		width: 100%;
+		height: 4.25rem;
+		}	
 	}
 </style>

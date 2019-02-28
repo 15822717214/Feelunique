@@ -2,11 +2,14 @@
 	<div class="recommend">
 		<div class="title">
 			<span>推荐品牌</span>
-			<a><i>=></i>换一换</a>
+			<a @click="handleGoods()"><i>=></i>换一换</a>
 		</div>
 		<ul class="brands-item">
-			<li v-for="(item,index) in brandsimg">
-				<a href=""><img :src="item.logo"/></a>
+			<li v-for="(item,index) in brandsimg" >
+				<router-link :to="{name:'details'}">
+					<a href="" ><img :src="item.logo"/></a>
+					
+				</router-link>
 			</li>
 		</ul>
 	</div>
@@ -18,6 +21,11 @@
 		computed:{
 			...Vuex.mapState({
 				brandsimg:(state)=>state.classify.brandsimg
+			})
+		},
+		methods:{
+			...Vuex.mapActions({
+				handleGoods:"classify/handleGoods"
 			})
 		}
 	}

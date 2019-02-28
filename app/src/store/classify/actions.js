@@ -1,5 +1,6 @@
 import {HomeData} from "../../apis/classify";
 import axios from "axios";
+var i = 1
 export default{
 	handlebanner({commit}){
      axios({
@@ -10,9 +11,12 @@ export default{
 			})
 	},
 	async handleGoods({commit}){
-		let data = await HomeData({page:1});
+		let data = await HomeData({page:i});
 		commit("handleGoods",data);
-//		console.log(data)
+		i++
+		if(i==7){
+			i=1
+		}
 	}
 		
 }

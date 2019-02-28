@@ -9,7 +9,7 @@
 </template>
 
 <script>
-	import Header from "../classify/components/header";
+	import Header from "./components/header";
 	import Banner from "./components/banner";
 	import Recommend from './components/recommend';
 	import Allbrands from './components/allbrands';
@@ -30,7 +30,8 @@ export default {
       handlebanner:"classify/handlebanner",
       handleGoods:"classify/handleGoods"
     })
-  },
+  }
+  
   
   	
 }
@@ -38,10 +39,12 @@ export default {
 
 <style scoped lang="scss">
 	.brand{
-		width: 100%;
-		display: flex;
-		flex-direction: column;
-		flex: 1;
+		 width: 100%;
+      height: 100%;
+      overflow: auto;
+      flex: 1;
+      padding-bottom:1rem ;
+      padding-top:0.9998rem ;
 	}
  
 </style>

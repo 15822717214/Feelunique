@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import Home from '@/components/home/home'
 import Classify from '@/components/classify/classify'
 import Brand from '@/components/brand/brand'
+import Details from '@/components/brand/components/details'
 import ShoppingCart from "@/components/shoppingCart/shoppingCart"
 import My from '@/components/my/my'
 import Err from '@/components/err/err'
@@ -40,6 +41,15 @@ export default new Router({
       path: '/my',
       name: 'my',
       component: My
+    },
+    {
+    	path:'/details',
+    	name:'details',
+    	component:Details,
+    	meta:{
+        flag:false,
+        title:"详情页",
+      }
     },
     {
       path: '**',
