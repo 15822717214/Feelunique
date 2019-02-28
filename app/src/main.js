@@ -13,14 +13,20 @@ import "./assets/iconfont/iconfont.css"
 
 //引入store
 import store from "./store"
+//引入mint-ui
+import MintUI from 'mint-ui'
+import 'mint-ui/lib/style.css'
+Vue.use(MintUI)
+
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
+  el:'#app',
   router,
   store,
   components: { App },
   template: '<App/>'
 })
+

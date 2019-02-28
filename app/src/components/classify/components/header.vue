@@ -23,6 +23,7 @@ export default {
             height:0.62rem;
             font-size:0.26rem;
             border:1px solid #c8c8c8;
+            text-indent: .2rem;
         }
     }
  
