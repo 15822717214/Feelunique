@@ -1,12 +1,17 @@
 <template>
   <div class="header" >
-    <input type="text" id="inp" placeholder="请输入关键字"> 
+    <input type="text" id="inp" placeholder="请输入关键字"
+    @click="hanldClick()"> 
   </div>
 </template>
 
 <script>
 export default {
-  
+  methods:{
+      hanldClick(){
+          this.$router.push("/categories")
+      }
+  }
 }
 </script>
 
