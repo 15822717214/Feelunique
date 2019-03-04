@@ -1,5 +1,10 @@
 export default{
     bannerimg:[],
     brandsimg:[],
-    flag:""
+    outer:[],
+    page:1,
+    flag:"",
+    search:[],
+    newdata:[],
+    olddata:[]
 }

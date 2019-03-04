@@ -1,5 +1,5 @@
 <template>
-	<div class="nav">
+	<div class="nav" :class="isFixed== true?'isFixed':''">
 		<ul>
 			<li @click="handlebtn()">
 				综合
@@ -20,14 +20,14 @@
 			</li>
 		</ul>
 		<!--<transition name="move">-->
-			<div class="one" v-if="flag">
-				<li>综合排序<i class="iconfont">&#xe601;</i></li>
-				<li>销量从高到低</li>
-				<li>价格从低到高</li>
-				<li>价格从高到低</li>
-				<li>最新商家商品</li>
-				<li>折扣从高到低</li>
-			</div>
+		<div class="one" v-if="flag">
+			<li>综合排序<i class="iconfont">&#xe601;</i></li>
+			<li>销量从高到低</li>
+			<li>价格从低到高</li>
+			<li>价格从高到低</li>
+			<li>最新商家商品</li>
+			<li>折扣从高到低</li>
+		</div>
 		<!--</transition>-->
 	</div>
 </template>
@@ -36,14 +36,27 @@
 	export default {
 		data() {
 			return {
-				flag: false
+				flag: false,
+				isFixed: "false"
 			}
 		},
 		methods: {
 			handlebtn() {
 				this.flag = !this.flag;
+			},
+			handleScroll() {
+				var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+				if(scrollTop >44) {
+					this.isFixed = true;
+				} else {
+					this.isFixed = false;
+				}
 			}
+		},
+		mounted() {
+			window.addEventListener('scroll', this.handleScroll)
 		}
+
 	}
 </script>
 
@@ -51,6 +64,8 @@
 	.nav {
 		width: 100%;
 		height: .76rem;
+		background: #fff;
+		border-bottom:.01rem solid #e8e8e8;
 		ul {
 			width: 100%;
 			height: 100%;
@@ -71,6 +86,8 @@
 			width: 400%;
 			height: 5.4rem;
 			background: #fff;
+			position:relative ;
+			z-index: 10;
 			li {
 				width: 7.5rem;
 				padding: 0 .4rem;
@@ -86,5 +103,11 @@
 				}
 			}
 		}
+	}
+	.isFixed{
+		position:fixed;
+		left: 0;
+		top:0;
+		z-index: 10;
 	}
 </style>

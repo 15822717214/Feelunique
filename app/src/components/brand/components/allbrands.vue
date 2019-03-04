@@ -4,11 +4,12 @@
 			<span>所有品牌</span>
 		</div>
 		<IndexList></IndexList>
+		
 	</div>
 </template>
 
 <script>
-	import IndexList from "./IndexList"
+	import IndexList from "./list"
 	export default {
 		components:{
 			"IndexList":IndexList
@@ -29,5 +30,6 @@
 			align-items: center;
 			font-size: .32rem;
 		}
+		
 	}
 </style>

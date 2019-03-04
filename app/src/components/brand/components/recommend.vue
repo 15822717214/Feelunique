@@ -6,7 +6,7 @@
 		</div>
 		<ul class="brands-item">
 			<li v-for="(item,index) in brandsimg" >
-				<router-link :to="{name:'details'}">
+				<router-link :to="{path:'details',query:{id:index,name:4415}}">
 					<a href="" ><img :src="item.logo"/></a>
 					
 				</router-link>
@@ -20,7 +20,7 @@
 	export default{
 		computed:{
 			...Vuex.mapState({
-				brandsimg:(state)=>state.classify.brandsimg
+				brandsimg:(state)=>state.classify.brandsimg,
 			})
 		},
 		methods:{

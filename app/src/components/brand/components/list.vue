@@ -1,6 +1,6 @@
 <template>
 	<div id="IndexList">
-		<mt-index-list >
+		<mt-index-list  :show-indicator="false" >
 			<mt-index-section index="A">
 				<mt-cell title="Aaron"></mt-cell>
 				<mt-cell title="Alden"></mt-cell>
@@ -90,8 +90,10 @@
 </template>
 
 <script>
-	export default {
 
+	export default {
+		
+		
 	}
 </script>
 
@@ -99,8 +101,5 @@
 	#IndexList{
 		width: 100%;
 		height: auto;
-		.mint-cell-wrapper{
-			font-size: .36rem!important;
-		}
 	}
 </style>

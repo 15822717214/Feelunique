@@ -18,7 +18,10 @@ import store from "./store"
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
 Vue.use(MintUI)
+//import { IndexList, IndexSection } from 'mint-ui';
 
+//Vue.component(IndexList.name, IndexList);
+//Vue.component(IndexSection.name, IndexSection);
 
 Vue.config.productionTip = false
 

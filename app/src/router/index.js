@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 //引入路由跳转的组件
-import Home from '@/components/home/home'
-import Classify from '@/components/classify/classify'
-import Brand from '@/components/brand/brand'
-import Details from '@/components/brand/components/details'
-import ShoppingCart from "@/components/shoppingCart/shoppingCart"
-import My from '@/components/my/my'
 import Err from '@/components/err/err'
 
 Vue.use(Router)
@@ -20,36 +14,64 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: ()=>import('@/components/home/home'),
+      meta:{
+        flag:true,
+      }
     },
     {
       path: '/classify',
       name: 'classify',
-      component: Classify
+      component: ()=>import('@/components/classify/classify'),
+      meta:{
+        flag:true,
+      }
     },
     {
       path: '/brand',
       name: 'brand',
-      component: Brand
+      component:()=>import('@/components/brand/brand'),
+      meta:{
+        flag:true,
+      }
     },
     {
       path:'/shoppingCart',
       name: 'shoppingCart',
-      component: ShoppingCart
+      component:()=>import("@/components/shoppingCart/shoppingCart"),
+      meta:{
+        flag:true,
+      }
     },
     {
       path: '/my',
       name: 'my',
-      component: My
+      component:()=>import('@/components/my/my'),
+      meta:{
+        flag:true,
+      }
     },
     {
     	path:'/details',
     	name:'details',
-    	component:Details,
+    	component:()=>import('@/components/brand/components/details'),
     	meta:{
         flag:false,
-        title:"详情页",
+        title:"详情页"
       }
+    },
+    {
+    	path:"/newdeta",
+    	name:'newdeta',
+    	component:()=>import('@/components/brand/components/newdeta'),
+    	meat:{
+    		flag:true
+    	}
+    },
+    {
+    	path:'/seo',
+    	name:'seo',
+    	component:()=>import('@/components/brand/components/seo')
     },
     {
       path: '**',

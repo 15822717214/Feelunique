@@ -1,31 +1,41 @@
 <template>
 	<div id="tp">
-		<i class="iconfont">&#xe602;</i>
+		<i class="iconfont" @click="comed()">&#xe602;</i>
 		<div class="inpt">
-			<input type="text" placeholder="Maybelline New York" />
+			<input type="text" placeholder="请输入关键字" @click="comebaby()" />
 			<i class="iconfont">&#xe619;</i>
 		</div>
 		<i class="iconfont">&#xe652;</i>
-		<i class="iconfont" style="font-size: .38rem;">&#xe618;</i>	
+		<i class="iconfont" style="font-size: .38rem;">&#xe618;</i>
 	</div>
 </template>
 
 <script>
-	export default{
-		
+	export default {
+		methods: {
+			comed() {
+				this.$router.back()
+			},
+			comebaby() {
+				this.$router.push({
+					name: "seo"
+				})
+			}
+
+		}
 	}
 </script>
 
 <style scoped lang="scss">
-	#tp{
+	#tp {
 		width: 100%;
 		height: .88rem;
-		border-bottom:.005rem solid #e8e8e8 ;
+		border-bottom: .005rem solid #e8e8e8;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		padding: .15rem .24rem;
-		i{
+		i {
 			display: block;
 			width: .44rem;
 			height: .44rem;
@@ -34,23 +44,22 @@
 			justify-content: center;
 			align-items: center;
 		}
-		.inpt{
+		.inpt {
 			width: 5.7rem;
 			height: .6rem;
 			background: #E8E8E8;
-			border-radius:.3rem ;
+			border-radius: .3rem;
 			display: flex;
 			align-items: center;
-			input{
+			input {
 				width: 80%;
 				height: 80%;
 				margin-left: .3rem;
 				background: #E8E8E8;
 				border: none;
-				outline:medium;
+				outline: medium;
 				font-size: .32rem;
 			}
 		}
-		
 	}
 </style>

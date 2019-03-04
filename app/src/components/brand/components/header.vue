@@ -1,19 +1,23 @@
 <template>
   <div class="header" >
-    <input type="text" id="inp" placeholder="请输入关键字"> 
+    <input type="text" id="inp" placeholder="请输入关键字" @click="comebaby()"> 
   </div>
 </template>
 
 <script>
 export default {
-  
+  methods:{
+  	comebaby(){
+  		this.$router.push({name:"seo"})
+  	}
+  }
 }
 </script>
 
 <style lang="scss">
     .header{
         width:100%;
-        height:0.9998rem;
+        height:1rem;
         background:#fff;
         text-align:center; 
         line-height: 0.9998rem;

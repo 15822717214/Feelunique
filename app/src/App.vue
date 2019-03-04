@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Footer-com v-if="flag"/>
+    <Footer-com v-show="this.$route.meta.flag"/>
     <router-view/>
   </div>
 </template>
@@ -11,11 +11,6 @@ import Vuex from "vuex";
 export default {
   components:{
     "Footer-com":Footer
-  },
-  data(){
-  	return{
-  		flag:true
-  	}
   }
 }
 </script>

@@ -1,7 +1,9 @@
 <template>
 	<div class="details">
 		<Header/>
-		<Nav/>
+
+			<Nav/>
+		
 		<Center/>
 	</div>
 </template>
@@ -10,12 +12,23 @@
 	import Header from "./components/header";
 	import Nav from "./components/nav";
 	import Center from "./components/center";
+	import Vuex from "vuex"
 	export default{
 		components:{
 			"Header":Header,
 			"Nav":Nav,
 			"Center":Center
+		},
+		methods:{
+			...Vuex.mapActions({
+				handleimg:"classify/handleimg"
+			})
+		},
+		created(){
+			let sand=this.$route.query
+			this.handleimg(sand)
 		}
+		
 	}
 	
 </script>
