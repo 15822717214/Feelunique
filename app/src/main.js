@@ -16,6 +16,7 @@ import "./assets/iconfontclassify/iconfont.css"
 //引入store
 import store from "./store"
 
+<<<<<<< HEAD
 //引入mint-ui 插件
 import Mint from "mint-ui"
 Vue.use(Mint)
@@ -28,6 +29,16 @@ Vue.use(ElementUI)
 
 //引入mock
 import "./mock"
+=======
+//引入swiper
+import "../node_modules/swiper/dist/css/swiper.min.css";
+
+//引入element-ui
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI)
+
+>>>>>>> yjx
 
 Vue.config.productionTip = false
 

@@ -1,6 +1,10 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
     <Footer-com v-show="this.$route.meta.flag"/>
+=======
+    <Footer-com v-show="$route.meta.flag"/>
+>>>>>>> yjx
     <router-view/>
   </div>
 </template>

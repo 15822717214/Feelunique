@@ -23,6 +23,7 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
+<<<<<<< HEAD
       // component: Home
       //使用路由的懒加载
       component: (resolve) => require(["../components/home/home.vue"], resolve),
@@ -30,11 +31,19 @@ export default new Router({
         flag: true,
         title: "首页"
       },
+=======
+      component: Home,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
+>>>>>>> yjx
     },
     //分类
     {
       path: '/classify',
       name: 'classify',
+<<<<<<< HEAD
       // component: Classify
       component: (resolve) => require(["../components/classify/classify.vue"], resolve),
       meta: {
@@ -48,33 +57,57 @@ export default new Router({
       //     component: Content_two
       //   }
       // ]
+=======
+      component: Classify,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
+>>>>>>> yjx
     },
     //品牌
     {
       path: '/brand',
       name: 'brand',
+<<<<<<< HEAD
       // component: Brand
       component: (resolve) => require(["../components/brand/brand.vue"], resolve),
       meta: {
         flag: true,
         title: "品牌"
       },
+=======
+      component: Brand,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
+>>>>>>> yjx
     },
     //购物车
     {
       path: '/shoppingCart',
       name: 'shoppingCart',
+<<<<<<< HEAD
       // component: ShoppingCart
       component: (resolve) => require(["../components/shoppingCart/shoppingCart.vue"], resolve),
       meta: {
         flag: true,
         title: "购物车"
       },
+=======
+      component: ShoppingCart,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
+>>>>>>> yjx
     },
     //我的
     {
       path: '/my',
       name: 'my',
+<<<<<<< HEAD
       // component: My
       component: (resolve) => require(["../components/my/my.vue"], resolve),
       meta: {
@@ -103,6 +136,13 @@ export default new Router({
         title: "商品列表"
       },
       // component: (resolve)=>require(["../components/categories/categories.vue"],resolve)
+=======
+      component: My,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
+>>>>>>> yjx
     },
     {
       path: '**',
