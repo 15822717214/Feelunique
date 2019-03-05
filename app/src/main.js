@@ -10,6 +10,8 @@ import "./common/js/flexble"
 
 //引入iconfont图标
 import "./assets/iconfont/iconfont.css"
+//引入分类的iconfont
+import "./assets/iconfontclassify/iconfont.css"
 
 //引入store
 import store from "./store"
@@ -24,10 +26,8 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
 
-//引入better-scroll插件
-// import BScroll from 'better-scroll'
-
-// Vue.use(BScroll)
+//引入mock
+import "./mock"
 
 Vue.config.productionTip = false
 
