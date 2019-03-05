@@ -14,6 +14,15 @@ import "./assets/iconfont/iconfont.css"
 //引入store
 import store from "./store"
 
+//引入swiper
+import "../node_modules/swiper/dist/css/swiper.min.css";
+
+//引入element-ui
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI)
+
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

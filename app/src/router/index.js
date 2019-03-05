@@ -19,27 +19,47 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: Home
+      component: Home,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
     },
     {
       path: '/classify',
       name: 'classify',
-      component: Classify
+      component: Classify,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
     },
     {
       path: '/brand',
       name: 'brand',
-      component: Brand
+      component: Brand,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
     },
     {
       path:'/shoppingCart',
       name: 'shoppingCart',
-      component: ShoppingCart
+      component: ShoppingCart,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
     },
     {
       path: '/my',
       name: 'my',
-      component: My
+      component: My,
+      meta:{
+        flag:true,
+				requireAuth:true
+      }
     },
     {
       path: '**',
