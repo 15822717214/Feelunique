@@ -5,6 +5,7 @@ import Vuex from "vuex";
 //分类
 import classify from "./classify";
 import home from "./home"
+import category from "./category"
 Vue.use(Vuex);
 
 let state = {};
@@ -19,8 +20,8 @@ const store = new Vuex.Store({
      getters,
      modules:{
         classify,
-        home
-        
+        home,
+        category
      }
 })
 

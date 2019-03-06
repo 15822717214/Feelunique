@@ -1,10 +1,10 @@
 <template>
     <div class="homenav">
         <div class="navbox" v-for="(item,index) in navs">
-            <a href="" >
+            <router-link to="category" >
                 <img class="navimgs" :src="item.navimgsrc">
                 <span>{{item.navtext}}</span>
-            </a>
+            </router-link>
         </div>
         <div class="section">
             <img class="sectionlogo" src="https://fu-assets.azoyacdn.com/active/img/mb-lishuo.png">

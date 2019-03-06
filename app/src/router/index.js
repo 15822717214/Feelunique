@@ -7,6 +7,7 @@ import Brand from '@/components/brand/brand'
 import ShoppingCart from "@/components/shoppingCart/shoppingCart"
 import My from '@/components/my/my'
 import Err from '@/components/err/err'
+import Category from '../components/category/category'
 
 Vue.use(Router)
 
@@ -58,6 +59,15 @@ export default new Router({
       component: My,
       meta:{
         flag:true,
+				requireAuth:true
+      }
+    },
+    {
+      path:'/category',
+      name:'category',
+      component:Category,
+      meta:{
+        flag:false,
 				requireAuth:true
       }
     },
