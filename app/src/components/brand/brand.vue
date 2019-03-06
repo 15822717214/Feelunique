@@ -63,7 +63,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 	.brand{
 		 width: 100%;
       height: 100%;
@@ -84,8 +84,10 @@ export default {
 				background:#fff;
 				text-align: center;
 				line-height: .4rem;
+				
 			}
 		}
+
 	}
  
 </style>
