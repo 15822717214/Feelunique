@@ -4,7 +4,7 @@ import qs from "qs";
 
 const http = axios.create({
     //baseURL:"XXXX",
-    timeout:10000
+    timeout:5000
 })
 
 

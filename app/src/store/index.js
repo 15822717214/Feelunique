@@ -4,7 +4,6 @@ import Vuex from "vuex";
 //引入自己负责的模块
 //分类
 import classify from "./classify";
-import home from "./home"
 Vue.use(Vuex);
 
 let state = {};
@@ -18,9 +17,7 @@ const store = new Vuex.Store({
      mutations,
      getters,
      modules:{
-        classify,
-        home
-        
+        classify
      }
 })
 
