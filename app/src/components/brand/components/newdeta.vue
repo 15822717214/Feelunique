@@ -1,9 +1,7 @@
 <template>
 	<div class="newdeta">
 		<Header/>
-		<keep-alive>
-			<Content/>
-		</keep-alive> 
+			<Content1/> 
 		<Foot/>
 	</div>
 	
@@ -11,14 +9,14 @@
 
 <script>
 	import Header from "./detacomponents/header";
-	import Content from "./detacomponents/content";
+	import Content1 from "./detacomponents/content1";
 	import Foot from "./detacomponents/foot";
 	import Vuex from "vuex";
 	export default{
 		
 		components:{
 			"Header":Header,
-			"Content":Content,
+			"Content1":Content1,
 			"Foot":Foot
 		},
 		created(){
