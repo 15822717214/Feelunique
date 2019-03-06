@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
 	<name>Feelunique</name>
+=======
+	<name>rxk</name>
+>>>>>>> rxk
 	<comment></comment>
 	<projects>
 	</projects>
@@ -16,7 +20,11 @@
 	</natures>
 	<filteredResources>
 		<filter>
+<<<<<<< HEAD
 			<id>1551873573079</id>
+=======
+			<id>1551880912767</id>
+>>>>>>> rxk
 			<name></name>
 			<type>26</type>
 			<matcher>
