@@ -1,19 +1,13 @@
 <template>
   <div>
-    <Header-com/>
-    <Main-com/>
+    <h1>分类</h1>
     <router-view/>
   </div>
 </template>
 
 <script>
-import Header from "./components/header"
-import Main from "./components/main"
 export default {
-  components:{
-    "Header-com":Header,
-    "Main-com":Main
-  }
+  
 }
 </script>
 

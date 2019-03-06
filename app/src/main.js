@@ -9,28 +9,27 @@ import "./common/css/reset.css"
 import "./common/js/flexble"
 
 //引入iconfont图标
-import "./assets/iconfont2/iconfont.css"
 import "./assets/iconfont/iconfont.css"
 
 //引入store
 import store from "./store"
-//引入mint-ui
-import MintUI from 'mint-ui'
-import 'mint-ui/lib/style.css'
-Vue.use(MintUI)
-//import { IndexList, IndexSection } from 'mint-ui';
 
-//Vue.component(IndexList.name, IndexList);
-//Vue.component(IndexSection.name, IndexSection);
+//引入swiper
+import "../node_modules/swiper/dist/css/swiper.min.css";
+
+//引入element-ui
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI)
+
 
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
-  el:'#app',
+  el: '#app',
   router,
   store,
   components: { App },
   template: '<App/>'
 })
-

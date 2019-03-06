@@ -1,7 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 //引入路由跳转的组件
+import Home from '@/components/home/home'
+import Classify from '@/components/classify/classify'
+import Brand from '@/components/brand/brand'
+import ShoppingCart from "@/components/shoppingCart/shoppingCart"
+import My from '@/components/my/my'
 import Err from '@/components/err/err'
+import Category from '../components/category/category'
 
 Vue.use(Router)
 
@@ -14,64 +20,56 @@ export default new Router({
     {
       path: '/home',
       name: 'home',
-      component: ()=>import('@/components/home/home'),
+      component: Home,
       meta:{
         flag:true,
+				requireAuth:true
       }
     },
     {
       path: '/classify',
       name: 'classify',
-      component: ()=>import('@/components/classify/classify'),
+      component: Classify,
       meta:{
         flag:true,
+				requireAuth:true
       }
     },
     {
       path: '/brand',
       name: 'brand',
-      component:()=>import('@/components/brand/brand'),
+      component: Brand,
       meta:{
         flag:true,
+				requireAuth:true
       }
     },
     {
       path:'/shoppingCart',
       name: 'shoppingCart',
-      component:()=>import("@/components/shoppingCart/shoppingCart"),
+      component: ShoppingCart,
       meta:{
         flag:true,
+				requireAuth:true
       }
     },
     {
       path: '/my',
       name: 'my',
-      component:()=>import('@/components/my/my'),
+      component: My,
       meta:{
         flag:true,
+				requireAuth:true
       }
     },
     {
-    	path:'/details',
-    	name:'details',
-    	component:()=>import('@/components/brand/components/details'),
-    	meta:{
+      path:'/category',
+      name:'category',
+      component:Category,
+      meta:{
         flag:false,
-        title:"详情页"
+				requireAuth:true
       }
-    },
-    {
-    	path:"/newdeta",
-    	name:'newdeta',
-    	component:()=>import('@/components/brand/components/newdeta'),
-    	meat:{
-    		flag:true
-    	}
-    },
-    {
-    	path:'/seo',
-    	name:'seo',
-    	component:()=>import('@/components/brand/components/seo')
     },
     {
       path: '**',
